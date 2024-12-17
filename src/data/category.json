@@ -1,0 +1,19 @@
+{
+    "category":
+    [
+        {
+            "index": 1,
+            "categoryType": "houses apartments",
+            "imgUrl": "box_item_img_2",
+            "name": "Trinity River Audubon Centre ( Data Test)",
+            "subTitle": "Hoses / Apartments"
+        },
+        {
+            "index": 2,
+            "categoryType": "houses interior",
+            "imgUrl": "box_item_img_2",
+            "name": "Theatre de Stoep  ( Data Test)",
+            "subTitle": "Hoses  / Interior"
+        }
+    ]
+}
