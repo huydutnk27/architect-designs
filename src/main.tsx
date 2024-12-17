@@ -10,10 +10,11 @@ import './assets/css/yourstyle.css';
 import './pages/Login/login.css';
 
 import App from './App.tsx'
+// import ContextProvider from './context/context-provider.tsx';
 
 ReactDOM.createRoot(document.getElementById('main')!).render(
     <React.StrictMode>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
             <App />
         </BrowserRouter>
     </React.StrictMode>

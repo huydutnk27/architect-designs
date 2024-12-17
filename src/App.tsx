@@ -1,6 +1,15 @@
 
 import { useEffect } from 'react';
-import { Routes } from './routes';
+import { AuthProvider } from './hooks/useAuth';
+import LayoutComponent from './layout/Layout';
+import Login from './pages/login';
+import AdminLayout from './layout/AdminLayout';
+import { Route, Routes } from 'react-router-dom';
+import { ROLES } from './hooks/roles';
+import ProtectedRoute from './routes/ProtectedRoute';
+import Category from './pages/admin/Category';
+import CategoryDetail from './pages/admin/CategoryDetail';
+import HomeComponent from './components/Home';
 
 // Create the function
 async function AddLibrary(urlOfTheLibrary: string) {
@@ -26,18 +35,23 @@ function App() {
       }, []);
     
     return (
-        <>
-            <Routes isAuthorized={true} />
-            {/* <HelmetProvider context={helmetContext}>
-                <Helmet>
-                    <script defer src="/src/assets/js/jquery.min.js" type="text/javascript"/>
-                    <script defer src="/src/assets/js/plugins.js" type="text/javascript"></script>
-                    <script defer src="/src/assets/js/core.js" type="text/javascript"></script>
-                    <script defer src="/src/assets/js/scripts.js" type="text/javascript"></script>
-                </Helmet>
-            </HelmetProvider> */}
-        </>
-        
+        <AuthProvider>
+            <Routes>
+                <Route path="/" element={<LayoutComponent />}>
+                    <Route path="/" element={<HomeComponent />} />
+                </Route>
+                <Route path="/login" element={<Login />} />
+                {/* protected routes */}
+                <Route path="/admin" element={
+                    <ProtectedRoute roles={[ROLES.ADMIN]}>
+                        <AdminLayout />
+                    </ProtectedRoute>
+                }>
+                    <Route path="/admin/categories" element={<Category />} />
+                    <Route path="/admin/categories/edit" element={<CategoryDetail />} />
+                </Route>
+            </Routes>
+        </AuthProvider>
     ) 
 }
 
