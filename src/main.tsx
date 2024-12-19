@@ -7,7 +7,7 @@ import './assets/css/reset.css';
 import './assets/css/plugins.css';
 import './assets/css/style.css';
 import './assets/css/yourstyle.css';
-import './pages/Login/login.css';
+import './pages/login/login.css';
 
 import App from './App.tsx'
 // import ContextProvider from './context/context-provider.tsx';
