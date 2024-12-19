@@ -8,7 +8,7 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "start": "node server/build/index.js",
+        "start": "node server/run/index.js",
         "node-dev": "nodemon server/index.ts"
     },
     "dependencies": {
