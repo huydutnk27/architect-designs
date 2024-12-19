@@ -12,6 +12,9 @@ const buildPath = path.join(__dirname, 'build');
 app.use('/', express.static(buildPath));
 app.use(express.json());
 app.use(cors());
+const apiRouter = require("./routes");
+
+app.use("/api", apiRouter);
 
 app.post('/pet', (req,res) => {
     const { hasPetted } = req.body;
@@ -20,14 +23,14 @@ app.post('/pet', (req,res) => {
     } else {
         res.json({message: "..Why did you stop? T.T", image: "sadpanda"});
     }
-})
+});
 
 // gets the static files from the build folder
 app.get('/*', (req, res) => {
     res.sendFile(path.join(buildPath, 'index.html'));
-})
+});
 
 // Showing that the server is up and running
 app.listen(port, () => {
     console.log(`Server is online on port: ${port}`);
-})
+});

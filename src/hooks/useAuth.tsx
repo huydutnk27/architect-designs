@@ -3,6 +3,7 @@ import { createContext, useContext, useMemo, useState } from 'react';
 import { ROLES } from './roles';
 import { useNavigate } from 'react-router-dom';
 import { useLocalStorage } from './useLocalStorage';
+import axios from 'axios';
 
 const AuthContext =  createContext({
     isAuthenticated: false,
@@ -18,12 +19,18 @@ export const AuthProvider = ({ children }) => {
 
     // call this function when you want to authenticate the user
     const login = (username: string, password: string) => {
-        // Perform your authentication logic here
-        if (username === 'admin' && password === 'password') {
-            setIsAuthenticated(true);
-            setUser({ username, role: ROLES.ADMIN });
-            navigate("/admin");
-        }
+        axios.post("/api/checkLogin", {
+            username,
+            password,
+        }).then((response) => {
+            console.log(response);
+             // Redirect to admin page when user authenticated success.
+            if(response && response.data.isTrust) {
+                setIsAuthenticated(true);
+                setUser({ username, role: ROLES.ADMIN });
+                navigate("/admin/categories");
+            }
+        });
     };
 
     // call this function to sign out logged in user
