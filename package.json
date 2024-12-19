@@ -5,11 +5,12 @@
     "type": "commonjs",
     "scripts": {
         "dev": "vite",
-        "build": "tsc -b && vite build",
+        "build": "tsc -b && vite build && npm run build:server",
         "lint": "eslint .",
         "preview": "vite preview",
         "start": "node server/run/index.js",
-        "node-dev": "nodemon server/index.ts"
+        "node-dev": "nodemon server/index.ts",
+        "build:server": "cd server && npm run-script build"
     },
     "dependencies": {
         "axios": "^1.7.9",
