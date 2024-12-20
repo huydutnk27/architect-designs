@@ -6,10 +6,7 @@
     "main": "server/build/index.js",
     "scripts": {
         "build": "npx tsc",
-        "lint": "eslint .",
-        "preview": "vite preview",
-        "start": "nodemon build/index.js",
-        "dev": "nodemon server/index.ts"
+        "lint": "eslint ."
     },
     "dependencies": {
         "axios": "^1.7.9",
