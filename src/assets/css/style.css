@@ -759,7 +759,6 @@ header {
 .logo-holder {
 	float: left;
 	position: relative;
-	max-width: 250px;
 	z-index: 21;
 	margin-top: 10px;
 	padding: 0 30px;
@@ -795,6 +794,8 @@ header {
 
 .logo-holder img {
 	float: left;
+	max-width: 250px;
+	max-height: 245px;
 }
 
 .logo-holder p {
@@ -808,6 +809,8 @@ header {
 	width: 100%;
 	margin-top: 14px;
 	line-height: 15px;
+	position: absolute;
+	left: 15%;
 }
 
 .mob-logo {
