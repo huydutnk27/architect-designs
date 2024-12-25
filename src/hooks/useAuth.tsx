@@ -23,12 +23,12 @@ export const AuthProvider = ({ children }) => {
             username,
             password,
         }).then((response) => {
-            console.log(response);
              // Redirect to admin page when user authenticated success.
             if(response && response.data.isTrust) {
                 setIsAuthenticated(true);
                 setUser({ username, role: ROLES.ADMIN });
-                navigate("/admin/categories");
+                navigate("/admin/categories", { replace: true });
+                navigate(0);
             }
         });
     };

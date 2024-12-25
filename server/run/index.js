@@ -12,20 +12,18 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3001;
 const buildPath = path.join(__dirname, '../../build');
-
 // Middleware
-app.use(body_parser_1.default.json());
-
+app.use(body_parser_1.default.json({ limit: '50mb' }));
+app.use(body_parser_1.default.urlencoded({ limit: '50mb', extended: true }));
+app.use(express_1.default.json());
+app.use(express_1.default.static(buildPath));
 app.use("/api", index_1.default);
 app.get('/api/test', async (_, res) => {
     res.json({ greeting: "Hello AAAAAAAAAA" });
 });
-app.use(express_1.default.static(buildPath));
 app.get('/*', (_, res) => {
     res.sendFile(path.join(buildPath, 'index.html'));
 });
-
-// Start server
 app.listen(port, () => {
-    console.log(`[server]: Server is running at :${port}`);
+    console.log(`[server]: Server is running at ${port}`);
 });

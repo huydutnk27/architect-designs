@@ -1,5 +1,6 @@
 // import { useNavigate } from 'react-router-dom';
 import imgLogo from '../../assets/images/logo.png';
+import { ToastContainer } from "react-toastify";
 // import loader from '../assets/images/loader.png';
 // Function component using arrow function syntax
 const AdminHeaderComponent = () => {
@@ -10,6 +11,7 @@ const AdminHeaderComponent = () => {
     // };
     return (
         <>
+            <ToastContainer hideProgressBar/>
             {/* <!--=============== header ===============--> */}
             <header className="main-header">
                 <div className="scroll-holder">

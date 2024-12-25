@@ -1,5 +1,5 @@
-{
-    "category":[
+export const data = {
+	"category":[
 		{
 			"index":1,
 			"cateId": "c2e37c15-0e6f-49ef-88de-6cf370e12b96",
