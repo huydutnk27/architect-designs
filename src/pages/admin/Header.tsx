@@ -1,5 +1,5 @@
 // import { useNavigate } from 'react-router-dom';
-import imgLogo from '../../assets/images/logo.png';
+import imgLogo from '../../assets/images/logo_1.png';
 import { ToastContainer } from "react-toastify";
 // import loader from '../assets/images/loader.png';
 // Function component using arrow function syntax
@@ -26,13 +26,13 @@ const AdminHeaderComponent = () => {
                         <nav>
                             <ul>
                                 <li><a href="index.html" className="ajax act-link">Category</a></li>
-                                <li><a href="portfolio.html" className="ajax">Products</a></li>
-                                <li><a href="contact.html" className="ajax">Contact</a></li>
+                                <li><a href="portfolio.html" className="ajax">SẢN PHẨM</a></li>
+                                <li><a href="contact.html" className="ajax">LIÊN HỆ</a></li>
                                 <li><a href="blog.html" className="ajax">Blog</a></li>
-                                <li>
-                                    <a href="#nolink">Pages</a>
+                                {/* <li> */}
+                                    {/* <a href="#nolink">Pages</a> */}
                                     {/* <!-- subnav--> */}
-                                    <ul>
+                                    {/* <ul>
                                         <li><a href="about2.html" className="ajax">About minimal</a></li>
                                         <li><a href="category.html" className="ajax">Category</a></li>
                                         <li><a href="team-single.html" className="ajax">Team single</a></li>
@@ -40,9 +40,9 @@ const AdminHeaderComponent = () => {
                                         <li><a href="blog-single.html" className="ajax">Blog single</a></li>
                                         <li><a href="contact2.html" className="ajax">Contact 2</a></li>
                                         <li><a href="404.html" className="ajax">404</a></li>
-                                    </ul>
+                                    </ul> */}
                                     {/* <!-- subnav end--> */}
-                                </li>
+                                {/* </li> */}
                             </ul>
                         </nav>
                     </div>

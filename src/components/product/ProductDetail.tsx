@@ -1,8 +1,8 @@
 import axios from 'axios';
 import bg_img from '../../assets/images/bg/20.jpg';
-import product_detail_img_1 from '../../assets/images/folio/thumbs/2.jpg';
-import product_detail_img_2 from '../../assets/images/folio/thumbs/3.jpg';
-import product_detail_img_3 from '../../assets/images/folio/thumbs/4.jpg';
+// import product_detail_img_1 from '../../assets/images/folio/thumbs/2.jpg';
+// import product_detail_img_2 from '../../assets/images/folio/thumbs/3.jpg';
+// import product_detail_img_3 from '../../assets/images/folio/thumbs/4.jpg';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ProductEntity } from '../../model/product';
@@ -88,32 +88,32 @@ const ProductDetail = () => {
                                 <section  className="no-padding">
                                     <div className="details-box">
                                         {/* <!-- custom-slider-holder --> */}
-                                        <div className="custom-slider-holder mr-bottom">
-                                            <div className="custom-slider">
+                                        <div className="custom-slider-holder-not mr-bottom">
+                                            <div className="custom-slider-not">
                                                 {/* <!-- 1 --> */}
                                                 <div className="item">
-                                                    <img src={product_detail_img_1} alt="" className="respimg" />
-                                                    <a className="intense slider-zoom" href={product_detail_img_1}><i className="fa fa-expand"></i></a>
+                                                    <img src={imageData} alt="" className="respimg" />
+                                                    <a className="intense slider-zoom" href={imageData}><i className="fa fa-expand"></i></a>
                                                 </div>
                                                 {/* <!-- 1 end--> */}
                                                 {/* <!-- 2 --> */}
-                                                <div className="item">
+                                                {/* <div className="item">
                                                     <img src={product_detail_img_2} alt="" className="respimg" />
                                                     <a className="intense slider-zoom" href={product_detail_img_2}><i className="fa fa-expand"></i></a>
-                                                </div>
+                                                </div> */}
                                                 {/* <!-- 2 end--> */}
                                                 {/* <!-- 3 --> */}
-                                                <div className="item">
+                                                {/* <div className="item">
                                                     <img src={product_detail_img_3} alt="" className="respimg" />
                                                     <a className="intense slider-zoom" href={product_detail_img_3}><i className="fa fa-expand"></i></a>
-                                                </div>
+                                                </div> */}
                                                 {/* <!-- 3 end--> */}
                                             </div>
-                                            <div className="panel-dots-holder"><div className="panel-dots-inner"><div className="panel-dots"></div></div></div>
+                                            {/* <div className="panel-dots-holder"><div className="panel-dots-inner"><div className="panel-dots"></div></div></div>
                                             <div className="customNavigation">
                                                 <a className="next-slide transition"><i className="fa fa-long-arrow-right"></i></a>
                                                 <a className="prev-slide transition"><i className="fa fa-long-arrow-left"></i></a>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         {/* <!-- custom-slider-holder end --> */}
                                         <div className="row">

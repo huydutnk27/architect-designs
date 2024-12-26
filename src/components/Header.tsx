@@ -36,18 +36,14 @@ const HeaderComponent = () => {
                                     {/* <!-- subnav end--> */}
                                 </li>
                                 <li>
-                                    <a href="portfolio.html" className="ajax">TRẦN XUYÊN SÁNG</a>
+                                    <a href="javascript:void(0)" className="ajax">TRẦN</a>
                                     {/* <!-- subnav--> */}
-                                    {/* <ul>
-                                        <li><a href="portfolio2.html" className="ajax">Style 2</a></li>
-                                        <li><a href="portfolio3.html" className="ajax">Style 3</a></li>
-                                        <li><a href="portfolio-single.html" className="ajax">Portfolio single 1</a></li>
-                                        <li><a href="portfolio-single2.html" className="ajax">Portfolio single 2</a></li>
-                                        <li><a href="portfolio-single3.html" className="ajax">Portfolio single 3</a></li>
-                                        <li><a href="portfolio-single4.html" className="ajax">Portfolio single 4</a></li>
-                                        <li><a href="portfolio-single5.html" className="ajax">Portfolio single 5</a></li>
-                                        <li><a href="portfolio-single6.html" className="ajax">Portfolio single 6</a></li>
-                                    </ul> */}
+                                    <ul>
+                                        <li><a href="javascript:void(0)" className="ajax">TRẦN XUYÊN SÁNG</a></li>
+                                        <li><a href="javascript:void(0)" className="ajax">TRẦN SAO</a></li>
+                                        <li><a href="javascript:void(0)" className="ajax">TRẦN HỌA TIẾT</a></li>
+                                        <li><a href="javascript:void(0)" className="ajax">TRẦN TRẮNG</a></li>
+                                    </ul>
                                     {/* <!-- subnav end--> */}
                                 </li>
                                 <li><a href="contact.html" className="ajax">VẬT TƯ</a></li>
