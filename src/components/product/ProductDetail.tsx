@@ -118,7 +118,7 @@ const ProductDetail = () => {
                                         {/* <!-- custom-slider-holder end --> */}
                                         <div className="row">
                                             <div className="col-md-8">
-                                                <h3>Product Name</h3>
+                                                <h3>CHI TIẾT SẢN PHẨM: </h3>
                                                 <p className="big-parag">{productDetail.name}</p>
                                                 <p dangerouslySetInnerHTML={{ __html: productDetail.description }}></p>
                                                 <a href="#" className="btn flat-btn float-btn ">launch project</a>
