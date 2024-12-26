@@ -70,7 +70,7 @@ const HomeComponent = () => {
                                         </div>
                                         <div className="grid-item">
                                             <h3><a href="javascript:void(0)" className="ajax portfolio-link" onClick={() => onDetailClick(item.cateId)}>{item.name}</a></h3>
-                                            <span>{item.subTitle}</span>
+                                            <span className="sub-title">{item.subTitle}</span>
                                         </div>
                                     </div>
                                 </div>

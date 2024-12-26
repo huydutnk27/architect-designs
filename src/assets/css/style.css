@@ -2262,6 +2262,13 @@ section.md-padding .section-title {
 	color: #999;
 }
 
+.grid-item .sub-title {
+	text-transform: uppercase;
+    font-style: oblique;
+    font-weight: 500;
+    color: #6eb8d4;
+}
+
 .grid-item svg {
 	width: 1.5em;
 	height: 1.5em;
