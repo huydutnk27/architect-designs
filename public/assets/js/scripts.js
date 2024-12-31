@@ -3631,7 +3631,7 @@ jQuery(document).ready(function ($) {
     var field_newsletter = 1;
     var field_path = "https://demo.fieldthemes.com/decor/home3/modules/fieldpopupnewsletter/ajax.php";
 
-    $(window).load(function () {
+    // $(window).load(function () {
         $("#slide").owlCarousel({
             itemsCustom: [
                 [0, 1],
@@ -3879,7 +3879,7 @@ jQuery(document).ready(function ($) {
             });
         }
 
-    });
+    // });
 
     $(".tab_category_slider").hide();
     $(".tab_category_slider:first").show();
@@ -3947,6 +3947,7 @@ jQuery(document).ready(function ($) {
             window.setTimeout(ScaleSlider, 30);
         }
     }
+    
     ScaleSlider();
     if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
         $(window).on("resize", ScaleSlider);

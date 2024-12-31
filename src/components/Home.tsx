@@ -55,8 +55,8 @@ const HomeComponent = () => {
     // const navigation = useNavigate();
     // const home = use(messagePromise);
     const [sliderData, setSliderData] = useState(home.slider);
-    let [headerImage, setHeaderImage] = useState(home.headerImg);
-    console.log("home['headerImg']", home);
+    const [headerImage, setHeaderImage] = useState(home.headerImg);
+    // console.log("home['headerImg']", home);
     // useEffect(() => {
         
         // let mounted = true;
