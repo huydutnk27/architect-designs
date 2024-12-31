@@ -10,10 +10,10 @@ import axios from 'axios';
 
 
 const AdminHome = lazy(() => import('./pages/admin/Home'));
-const Category = lazy(() => import('./pages/admin/Category'));
-const HomeComponent = lazy(() => import('./pages/home'));
+// const Category = lazy(() => import('./pages/admin/Category'));
+const HomeComponent = lazy(() => import('./components/Home'));
 const CategoryDetail = lazy(() => import('./pages/admin/CategoryDetail'));
-const ProductDetail = lazy(() => import('./pages/product/index'));
+// const ProductDetail = lazy(() => import('./pages/product/index'));
 
 // Create the function
 async function AddLibrary(urlOfTheLibrary: string) {
