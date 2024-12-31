@@ -1,4 +1,6 @@
-import HomeComponent from '../../components/Home';
+import { lazy } from 'react';
+
+const HomeComponent = lazy(() => import('../../components/Home'));
 
 const Home = () => {
     return (

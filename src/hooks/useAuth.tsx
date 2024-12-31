@@ -19,18 +19,18 @@ export const AuthProvider = ({ children }) => {
 
     // call this function when you want to authenticate the user
     const login = (username: string, password: string) => {
-        axios.post("/api/checkLogin", {
-            username,
-            password,
-        }).then((response) => {
-             // Redirect to admin page when user authenticated success.
-            if(response && response.data.isTrust) {
-                setIsAuthenticated(true);
-                setUser({ username, role: ROLES.ADMIN });
-                navigate("/admin/categories", { replace: true });
-                navigate(0);
-            }
-        });
+        // axios.post("/api/checkLogin", {
+        //     username,
+        //     password,
+        // }).then((response) => {
+        //      // Redirect to admin page when user authenticated success.
+        //     if(response && response.data.isTrust) {
+        //         setIsAuthenticated(true);
+        //         setUser({ username, role: ROLES.ADMIN });
+        //         navigate("/admin/categories", { replace: true });
+        //         navigate(0);
+        //     }
+        // });
     };
 
     // call this function to sign out logged in user

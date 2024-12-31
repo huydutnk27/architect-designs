@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
+import axios from 'axios';
+
+// Async function to fetch category data by id
+const initData = async () => {
+    return await axios.post('/api/initialData', {
+        params: {}
+    });
+};
 
 const Login = () => {
     const { login } = useAuth();
@@ -8,7 +16,10 @@ const Login = () => {
 
     const handleLogin = () => {
         // Implement login logic (e.g., call login method from AuthContext)
-        login(username, password);
+        // login(username, password);
+        initData().then((response) => {
+            console.log(response);
+        });
     };
 
     return (

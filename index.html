@@ -1,24 +1,202 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!--=============== basic  ===============-->
-        <meta charset="UTF-8">
-        <title>JS&LD - Make your home better</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
-        <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="./assets/images/favicon.ico">
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>NAM AN - TRAN XUYEN SANG</title>
+        <meta name="description" content="Shop powered by PrestaShop" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/vnd.microsoft.icon" href="assets/images/favicon.ico?1324977642" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png?1324977642" />
         <base href="/">
+        <script type="text/javascript">
+            var fieldbs_autoscroll = false;
+            var fieldbs_maxitem = "6";
+            var fieldbs_minitem = "2";
+            var fieldbs_navigation = true;
+            var fieldbs_pagination = false;
+            var fieldbs_pauseonhover = false;
+            var prestashop = {
+                cart: {
+                    products: [],
+                    totals: {
+                        total: { type: "total", label: "Total", amount: 0, value: "$0.00" },
+                        total_including_tax: { type: "total", label: "Total (tax incl.)", amount: 0, value: "$0.00" },
+                        total_excluding_tax: { type: "total", label: "Total (tax excl.)", amount: 0, value: "$0.00" },
+                    },
+                    subtotals: {
+                        products: { type: "products", label: "Subtotal", amount: 0, value: "$0.00" },
+                        discounts: null,
+                        shipping: { type: "shipping", label: "Shipping", amount: 0, value: "Free" },
+                        tax: { type: "tax", label: "Taxes", amount: 0, value: "$0.00" },
+                    },
+                    products_count: 0,
+                    summary_string: "0 items",
+                    labels: { tax_short: "(tax excl.)", tax_long: "(tax excluded)" },
+                    id_address_delivery: 0,
+                    id_address_invoice: 0,
+                    is_virtual: false,
+                    vouchers: { allowed: 0, added: [] },
+                    discounts: [],
+                    minimalPurchase: 0,
+                    minimalPurchaseRequired: "",
+                },
+                currency: { name: "US Dollar", iso_code: "USD", iso_code_num: "840", sign: "$" },
+                customer: {
+                    lastname: null,
+                    firstname: null,
+                    email: null,
+                    last_passwd_gen: null,
+                    birthday: null,
+                    newsletter: null,
+                    newsletter_date_add: null,
+                    ip_registration_newsletter: null,
+                    optin: null,
+                    website: null,
+                    company: null,
+                    siret: null,
+                    ape: null,
+                    outstanding_allow_amount: 0,
+                    max_payment_days: 0,
+                    note: null,
+                    is_guest: 0,
+                    id_shop: null,
+                    id_shop_group: null,
+                    id_default_group: 1,
+                    date_add: null,
+                    date_upd: null,
+                    reset_password_token: null,
+                    reset_password_validity: null,
+                    id: null,
+                    is_logged: false,
+                    gender: { type: null, name: null, id: null },
+                    risk: { name: null, color: null, percent: null, id: null },
+                    addresses: [],
+                },
+                language: { name: "English (English)", iso_code: "en", locale: "en-US", language_code: "en-us", is_rtl: "0", date_format_lite: "m\/d\/Y", date_format_full: "m\/d\/Y H:i:s", id: 1 },
+                page: {
+                    title: "",
+                    canonical: null,
+                    meta: { title: "Decor", description: "Shop powered by PrestaShop", keywords: "", robots: "index" },
+                    page_name: "index",
+                    body_classes: { "lang-en": true, "lang-rtl": false, "country-US": true, "currency-USD": true, "layout-full-width": true, "page-index": true, "tax-display-disabled": true },
+                    admin_notifications: [],
+                },
+                shop: {
+                    name: "Decor",
+                    email: "sales@yoursite.com",
+                    registration_number: "",
+                    long: false,
+                    lat: false,
+                    logo: "\/decor\/home3\/img\/logo.png",
+                    stores_icon: "\/decor\/home3\/img\/logo_stores.png",
+                    favicon: "\/decor\/home3\/img\/favicon.ico",
+                    favicon_update_time: "1324977642",
+                    address: { formatted: "Decor<br>United States", address1: "", address2: "", postcode: "", city: "", state: null, country: "United States" },
+                    phone: "",
+                    fax: "",
+                },
+                urls: {
+                    base_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/",
+                    current_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/",
+                    shop_domain_url: "https:\/\/demo.fieldthemes.com",
+                    img_ps_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/",
+                    img_cat_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/c\/",
+                    img_lang_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/l\/",
+                    img_prod_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/p\/",
+                    img_manu_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/m\/",
+                    img_sup_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/su\/",
+                    img_ship_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/s\/",
+                    img_store_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/st\/",
+                    img_col_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/img\/co\/",
+                    img_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/themes\/decor_home3\/assets\/img\/",
+                    css_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/themes\/decor_home3\/assets\/css\/",
+                    js_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/themes\/decor_home3\/assets\/js\/",
+                    pic_url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/upload\/",
+                    pages: {
+                        address: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/address",
+                        addresses: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/addresses",
+                        authentication: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/login",
+                        cart: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/cart",
+                        category: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=category",
+                        cms: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=cms",
+                        contact: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/contact-us",
+                        discount: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/discount",
+                        guest_tracking: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/guest-tracking",
+                        history: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/order-history",
+                        identity: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/identity",
+                        index: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/",
+                        my_account: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/my-account",
+                        order_confirmation: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/order-confirmation",
+                        order_detail: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=order-detail",
+                        order_follow: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/order-follow",
+                        order: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/order",
+                        order_return: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=order-return",
+                        order_slip: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/credit-slip",
+                        pagenotfound: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/page-not-found",
+                        password: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/password-recovery",
+                        pdf_invoice: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=pdf-invoice",
+                        pdf_order_return: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=pdf-order-return",
+                        pdf_order_slip: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=pdf-order-slip",
+                        prices_drop: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/prices-drop",
+                        product: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/index.php?controller=product",
+                        search: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/search",
+                        sitemap: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/sitemap",
+                        stores: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/stores",
+                        supplier: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/supplier",
+                        register: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/login?create_account=1",
+                        order_login: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/order?login=1",
+                    },
+                    theme_assets: "\/decor\/home3\/themes\/decor_home3\/assets\/",
+                    actions: { logout: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/?mylogout=" },
+                },
+                configuration: {
+                    display_taxes_label: false,
+                    low_quantity_threshold: 3,
+                    is_b2b: false,
+                    is_catalog: false,
+                    show_prices: true,
+                    opt_in: { partner: true },
+                    quantity_discount: { type: "discount", label: "Discount" },
+                    voucher_enabled: 0,
+                    return_enabled: 0,
+                    number_of_days_for_return: 14,
+                },
+                field_required: [],
+                breadcrumb: { links: [{ title: "Home", url: "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/" }], count: 1 },
+                link: { protocol_link: "https:\/\/", protocol_content: "https:\/\/" },
+                time: 1735265943,
+                static_token: "328b550320902db31ea20486f39ebb65",
+                token: "7f39712ecfd3406ed00a99b278ad9b57",
+            };
+            var search_url = "https:\/\/demo.fieldthemes.com\/decor\/home3\/en\/search";
+        </script>
+        <script type="text/javascript">
+            var LANG_RTL = 0;
+            var langIso = "en-us";
+            var baseUri = "https://demo.fieldthemes.com/decor/home3/";
+            var FIELD_enableCountdownTimer = true;
+            var FIELD_stickyMenu = true;
+            var FIELD_stickySearch = true;
+            var FIELD_stickyCart = true;
+            var FIELD_mainLayout = "fullwidth";
+            var countdownDay = "Day";
+            var countdownDays = "Days";
+            var countdownHour = "Hour";
+            var countdownHours = "Hours";
+            var countdownMinute = "Min";
+            var countdownMinutes = "Mins";
+            var countdownSecond = "Sec";
+            var countdownSeconds = "Secs";
+        </script>
     </head>
     <body>
         <!--================= main start ================-->
-        <div id="main"></div>
-        <!--  loader end -->
-        <div class="loader">
-            <div class="speeding-wheel"></div>
-        </div>
+        <main>
+            <div id="main"></div>
+        </main>
+        <!--================= main end ===================-->
         <!-- loader end -->
         <!--=============== google map ===============-->
         <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo"></script>

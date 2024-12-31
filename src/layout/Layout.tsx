@@ -1,4 +1,4 @@
-// import FooterComponent from './Footer';
+import FooterComponent from '../components/Footer';
 import HeaderComponent from '../components/Header';
 import { Outlet } from 'react-router-dom';
 
@@ -8,6 +8,7 @@ const LayoutComponent = () => {
         <>
             <HeaderComponent />
             <Outlet />
+            <FooterComponent />
         </>
     );
 };

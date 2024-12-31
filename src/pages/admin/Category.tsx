@@ -25,7 +25,7 @@ const Category = () => {
 
     return (
         <>
-            <AdminHeaderComponent />
+            
             {/* <!--=============== wrapper ===============--> */}
             <div id="wrapper">
                 {/* <!-- content-holder  --> */}

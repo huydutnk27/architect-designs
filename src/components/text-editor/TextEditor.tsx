@@ -10,20 +10,25 @@ const TextEditor = ({ editorStateData, onSetTextEditor }) => {
     const blocksFromHtml = htmlToDraft(editorStateData);
     const { contentBlocks, entityMap } = blocksFromHtml;
     const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-    let [editorState, setEditorState] = useState(
+    const [editorState, setEditorState] = useState(
         () => EditorState.createEmpty(),
     );
-    editorState = EditorState.createWithContent(contentState);
+    const [convertedContent, setConvertedContent] = useState(null);
     
     const onEditorStateChange = (editorState) => {
         setEditorState(editorState);
+        // editorStateData = convertToRaw(editorState.getCurrentContent());
         onSetTextEditor(draftToHtml(convertToRaw(editorState.getCurrentContent())));
     };
+
+    useEffect(() => {
+        // let html = convertToHTML(editorState.getCurrentContent());
+        // setConvertedContent(html);
+    }, [editorState]);
 
     return (
         <div>
             <Editor
-                editorState={editorState}
                 toolbarClassName="toolbarClassName"
                 wrapperClassName="wrapperClassName"
                 editorClassName="editorClassName"
