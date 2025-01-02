@@ -26562,7 +26562,7 @@ main {
     text-align: justify;
     padding-right: 15px;
 }
-.banner-text1:before {
+/* .banner-text1:before {
     content: "";
     position: absolute;
     border: 1px solid #b2b2b2;
@@ -26572,7 +26572,7 @@ main {
     left: -230px;
     top: -60px;
     z-index: 1;
-}
+} */
 @media (max-width: 1199px) {
     #product_absolute {
         display: none !important;
@@ -26624,9 +26624,9 @@ main {
     .banner-text1 {
         margin-left: 0;
     }
-    .banner-text1:before {
+    /* .banner-text1:before {
         top: -45px;
-    }
+    } */
 }
 @media (max-width: 767px) {
     .footer-center .block {
@@ -26644,13 +26644,13 @@ main {
     .banner-text1 {
         padding: 15px;
     }
-    .banner-text1:before {
+    /* .banner-text1:before {
         top: 0;
         right: 0;
         bottom: -10px;
         left: 0;
         height: auto;
-    }
+    } */
     .banner_home2 {
         margin-bottom: 0;
         margin-bottom: 80px !important;
@@ -26691,10 +26691,10 @@ main {
         color: #78b7c8;
     }
     body:not(#index) .content_text p {
-        color: #fff;
+        color: #999;
     }
     body:not(#index) .box-static_content:hover .content_text p {
-        color: #78b7c8;
+        color: #999;
     }
     body:not(#index) .box-static_content .fa:after {
         background: #fff;
@@ -27163,13 +27163,12 @@ main {
     border: 0;
 }
 .banner_home2 {
-    padding-top: 60px;
-    margin-bottom: 70px;
+    padding-top: 70px;
+    margin-bottom: 60px;
 }
 .banner_home2 .img_banner1 {
     padding: 10px;
     position: relative;
-    z-index: 10;
 }
 .banner_home2 .banner2 .banner-text1,
 .banner_home2 .banner1 .banner-text1 {
@@ -27195,6 +27194,7 @@ main {
     font-size: 15px;
     line-height: 24px;
     padding-bottom: 28px;
+    text-align: justify;
 }
 .banner-text1 > a {
     background: #78b7c8;
@@ -27206,9 +27206,12 @@ main {
 .banner-text1 > a:hover {
     background: #3d3d3d;
 }
+.banner_home2 > .row > .block:last-child {
+    padding-top: 20px;
+}
 .banner_home2 .img_banner1 .icon-border1:before {
     content: "";
-    width: 180px;
+    width: 200px;
     height: 10px;
     position: absolute;
     background: #78b7c8;
@@ -27218,7 +27221,7 @@ main {
 .banner_home2 .img_banner1 .icon-border1:after {
     content: "";
     width: 10px;
-    height: 110px;
+    height: 130px;
     position: absolute;
     background: #78b7c8;
     left: 0;
@@ -27227,7 +27230,7 @@ main {
 .banner_home2 .img_banner1 .icon-border2:before {
     content: "";
     width: 10px;
-    height: 110px;
+    height: 130px;
     position: absolute;
     background: #78b7c8;
     right: 0;
@@ -27235,7 +27238,7 @@ main {
 }
 .banner_home2 .img_banner1 .icon-border2:after {
     content: "";
-    width: 180px;
+    width: 200px;
     height: 10px;
     position: absolute;
     background: #78b7c8;

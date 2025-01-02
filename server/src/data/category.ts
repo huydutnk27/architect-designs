@@ -20,9 +20,6 @@ export const data = {
 				"imageData": "data:image/jpeg;base64,"
 			}
 		],
-		"headerImg": [
-			"data:image/jpeg;base64,","data:image/jpeg;base64,","data:image/jpeg;base64,"
-		],
 		"newArrivals":[
 			{
 				"productId": "01941609-4851-7804-b2c2-a1af9e0d5702",
@@ -61,13 +58,22 @@ export const data = {
 				"imageHoverData": "data:image/jpeg;base64,"
 			}
 		],
-		"specialProduct": {
-			"productId": "01941608-7ee6-714a-895e-aa429bd160bb",
-			"name": "Printed Summer Dress",
-			"imageData": "data:image/jpeg;base64,",
-			"mainText": "Classic Desk Lamp",
-			"subText": "Curabitur sit amet enim sodales nisl efficitur porttitor. Donec ac turpis diam. Mauris interdum magna eu neque convallis."
-		},
+		"specialProduct": [
+			{
+				"productId": "01941608-7ee6-714a-895e-aa429bd160bb",
+				"name": "Classic Desk Lamp",
+				"imageData": "data:image/jpeg;base64,",
+				"mainText": "Classic Desk Lamp",
+				"subText": "Curabitur sit amet enim sodales nisl efficitur porttitor. Donec ac turpis diam. Mauris interdum magna eu neque convallis."
+			},
+			{
+				"productId": "01942668-def9-7c8f-9464-c805cc075b55",
+				"name": "Bamboo Basket",
+				"imageData": "data:image/jpeg;base64,",
+				"mainText": "Bamboo Basket",
+				"subText": "Curabitur sit amet enim sodales nisl efficitur porttitor. Donec ac turpis diam. Mauris interdum magna eu neque convallis."
+			}
+		],
 		"saleProducts":[
 			{
 				"productId": "01941608-604f-7158-8591-ca5c74782b2b",

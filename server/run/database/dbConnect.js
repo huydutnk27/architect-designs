@@ -11,7 +11,7 @@ const initialSampleData = async () => {
         // MongoDB connection
         const mongoDb = await conn_1.default;
         if (mongoDb) {
-            const collectionName = "architect-design";
+            const collectionName = "architect-home";
             const collection = mongoDb.collection(collectionName);
             const categories = category_1.data.home;
             const insertManyResult = await collection.insertOne(categories);

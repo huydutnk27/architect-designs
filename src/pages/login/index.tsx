@@ -16,10 +16,10 @@ const Login = () => {
 
     const handleLogin = () => {
         // Implement login logic (e.g., call login method from AuthContext)
-        // login(username, password);
-        initData().then((response) => {
-            console.log(response);
-        });
+        login(username, password);
+        // initData().then((response) => {
+        //     console.log(response);
+        // });
     };
 
     return (

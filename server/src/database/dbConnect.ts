@@ -6,7 +6,7 @@ export const initialSampleData = async() => {
         // MongoDB connection
         const mongoDb = await dbPromise;
         if (mongoDb) {
-            const collectionName = "architect-design";
+            const collectionName = "architect-home";
             const collection = mongoDb.collection(collectionName);
             const categories = data.home;
             const insertManyResult = await collection.insertOne(categories);
