@@ -120,6 +120,22 @@
     font-size: 20px;
     cursor: pointer;
   }
+
+  .banner_home2 .banner-text1 h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .banner_home2 .banner-text1 h3 input {
+    font-size: 18px;
+  }
+
+  .banner_home2 .banner-text1 textarea {
+    height: 120px;
+    padding: 10px;
+    font-weight: 500;
+    resize: none;
+  }
 }
 
 .mcd-menu {

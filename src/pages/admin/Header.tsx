@@ -30,7 +30,7 @@ const AdminHeaderComponent = () => {
                                 </a>
                                 <ul>
                                     <li><a href="javascript:void(0)" onClick={() => navigateTo('slider')}><i className="fa fa-globe"></i>Slider Setting</a></li>
-                                    <li><a href="javascript:void(0)" onClick={() => navigateTo('header_image')}><i className="fa fa-trophy"></i>Header Image</a></li>
+                                    <li><a href="javascript:void(0)" onClick={() => navigateTo('special-product')}><i className="fa fa-trophy"></i>Special Product</a></li>
                                     <li><a href="javascript:void(0)" onClick={() => navigateTo('new_product')}><i className="fa fa-certificate"></i>New Arrivals</a></li>
                                 </ul>
                             </li>

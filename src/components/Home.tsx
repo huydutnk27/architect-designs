@@ -145,58 +145,58 @@ const HomeComponent = () => {
             </div>
 
             <div className="banner_home2">
-              <div className="row">
-                <div className="col-xs-12 col-sm-6 block banner1">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12">
-                      <div className="img_banner1">
-                        <div className="icon-border1"></div>
-                        <div className="icon-border2"></div>
-                        <a href="#">
-                          {" "}
-                          <img className="img-responsive" src={specialProduct[0].imageData} alt="" />
-                        </a>
-                      </div>
+                <div className="row">
+                    <div className="col-xs-12 col-sm-6 block banner1">
+                        <div className="row">
+                            <div className="col-xs-12 col-sm-12 col-md-12">
+                            <div className="img_banner1">
+                                <div className="icon-border1"></div>
+                                <div className="icon-border2"></div>
+                                <a href="#">
+                                {" "}
+                                <img className="img-responsive" src={specialProduct[0].imageData} alt="" />
+                                </a>
+                            </div>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12">
+                            <div className="banner-text1">
+                                <h3>
+                                <a className="href=">{specialProduct[0].mainText}</a>
+                                </h3>
+                                <p>{specialProduct[0].subText}</p>
+                                <a className="title_font shop-now1" href="#">
+                                Shop now !
+                                </a>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-12">
-                      <div className="banner-text1">
-                        <h3>
-                          <a className="href=">{specialProduct[0].mainText}</a>
-                        </h3>
-                        <p>{specialProduct[0].subText}</p>
-                        <a className="title_font shop-now1" href="#">
-                          Shop now !
-                        </a>
-                      </div>
+                    <div className="col-xs-12 col-sm-6 block banner2">
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12">
+                        <div className="banner-text1">
+                            <h3>
+                            <a className="href=">{specialProduct[1].mainText}</a>
+                            </h3>
+                            <p>{specialProduct[1].subText}</p>
+                            <a className="title_font shop-now1" href="#">
+                            Shop now !
+                            </a>
+                        </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12">
+                        <div className="img_banner1">
+                            <div className="icon-border1"></div>
+                            <div className="icon-border2"></div>
+                            <a href="#">
+                            {" "}
+                            <img className="img-responsive" src={specialProduct[1].imageData} alt="" />
+                            </a>
+                        </div>
+                        </div>
                     </div>
-                  </div>
+                    </div>
                 </div>
-                <div className="col-xs-12 col-sm-6 block banner2">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12">
-                      <div className="banner-text1">
-                        <h3>
-                          <a className="href=">{specialProduct[1].mainText}</a>
-                        </h3>
-                        <p>{specialProduct[1].subText}</p>
-                        <a className="title_font shop-now1" href="#">
-                          Shop now !
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-12">
-                      <div className="img_banner1">
-                        <div className="icon-border1"></div>
-                        <div className="icon-border2"></div>
-                        <a href="#">
-                          {" "}
-                          <img className="img-responsive" src={specialProduct[1].imageData} alt="" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* <!-- MODULE Tab Cate Products Products --> */}

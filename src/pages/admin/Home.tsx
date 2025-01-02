@@ -170,27 +170,61 @@ const AdminHome = () => {
                     </section>
                 </div>
             </div>
-            <div className="row" style={{display: (section === 'header_image' ? 'block' : 'none')}}>
+            <div className="row" style={{display: (section === 'special-product' ? 'block' : 'none')}}>
                 <div className="col-md-12 admin">
-                    <div className="banner_home3">
-                        <div className="hover_banner">
-                            <div className="row">
-                                <div className="col-xs-12 col-sm-4 col-md-4 block">
-                                    <a href="javascript:void(0);"> <img className="img-responsive" src={home_img_37} alt="" /></a>
-                                    <div className="edit-btn" >
-                                        <TfiPencilAlt />
+                    <div className="banner_home2">
+                        <div className="row">
+                            <div className="col-xs-12 col-sm-6 block banner1">
+                                <div className="row">
+                                    <div className="col-xs-12 col-sm-12 col-md-12">
+                                        <div className="img_banner1">
+                                            <div className="icon-border1"></div>
+                                            <div className="icon-border2"></div>
+                                            <a href="#">{" "}
+                                                <img className="img-responsive" src={home_img_37} alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="col-xs-12 col-sm-12 col-md-12">
+                                        <div className="banner-text1">
+                                            <label htmlFor="mainText1" className="form-label">Title</label>
+                                            <h3>
+                                                {/* <a className="href=">Classic Desk Lamp</a> */}
+                                                <input id="mainText1" className="form-control href=" type="text" value="Classic Desk Lamp"/>
+                                            </h3>
+                                            <label htmlFor="subText1" className="form-label">Sub Title</label>
+                                            <h3>
+                                                <textarea id="subText1" className="form-control" value="Curabitur sit amet enim sodales nisl efficitur porttitor. Donec ac turpis diam. Mauris interdum magna eu neque convallis."/>
+                                            </h3>
+                                            <a className="title_font shop-now1" href="#">Save changes</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="col-xs-12 col-sm-4 col-md-4 block">
-                                    <a href="javascript:void(0);"> <img className="img-responsive" src={home_img_38} alt="" /></a>
-                                    <div className="edit-btn" >
-                                        <TfiPencilAlt />
+                            </div>
+                            <div className="col-xs-12 col-sm-6 block banner2">
+                                <div className="row">
+                                    <div className="col-xs-12 col-sm-12 col-md-12">
+                                        <div className="banner-text1">
+                                            <label htmlFor="mainText1" className="form-label">Title</label>
+                                            <h3>
+                                                <input id="mainText1" className="form-control href=" type="text" value="Bamboo Basket"/>
+                                            </h3>
+                                            <label htmlFor="subText1" className="form-label">Sub Title</label>
+                                            <h3>
+                                                <textarea id="subText1" className="form-control" value="Curabitur sit amet enim sodales nisl efficitur porttitor. Donec ac turpis diam. Mauris interdum magna eu neque convallis."/>
+                                            </h3>
+                                            <a className="title_font shop-now1" href="#">Save changes</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-xs-12 col-sm-4 col-md-4 block">
-                                    <a href="javascript:void(0);"> <img className="img-responsive" src={home_img_39} alt="" /></a>
-                                    <div className="edit-btn" >
-                                        <TfiPencilAlt />
+                                    <div className="col-xs-12 col-sm-12 col-md-12">
+                                        <div className="img_banner1">
+                                            <div className="icon-border1"></div>
+                                            <div className="icon-border2"></div>
+                                            <a href="#">
+                                                {" "}
+                                                <img className="img-responsive" src={home_img_38} alt="" />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
