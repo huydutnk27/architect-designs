@@ -75,7 +75,7 @@
 }
 
 .contact-form .label {
-	position: absolute;
+	  position: absolute;
     left: 15px;
     bottom: 30px;
     font-size: 18px;
@@ -83,9 +83,9 @@
     font-weight: 400;
     color: #5543ca;
     cursor: text;
-	transition: -webkit-transform .2s ease-in-out;
-	transition: transform .2s ease-in-out;
-	transition: transform .2s ease-in-out,
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,
 		-webkit-transform .2s ease-in-out;
 }
 
@@ -104,38 +104,81 @@
 }
 
 .admin {
-  .banner_home3 {
-    height: auto;
-    .hover_banner {
-      position: relative;
-      top: 0;
-      margin: 0 auto;
+    .field-main-slider.block {
+      margin-bottom: 10px;
     }
-  }
 
-  .edit-btn {
-    text-align: right;
-    padding-top: 5px;
-    color: #2fb5d2;
-    font-size: 20px;
-    cursor: pointer;
-  }
+    .banner_home3 {
+      height: auto;
+      .hover_banner {
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+      }
+    }
 
-  .banner_home2 .banner-text1 h3 {
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
+    .edit-btn {
+      text-align: right;
+      padding-top: 5px;
+      color: #2fb5d2;
+      font-size: 20px;
+      cursor: pointer;
+    }
 
-  .banner_home2 .banner-text1 h3 input {
-    font-size: 18px;
-  }
+    .banner_home2 {
+      padding-top: 10px;
+    }
 
-  .banner_home2 .banner-text1 textarea {
-    height: 120px;
-    padding: 10px;
-    font-weight: 500;
-    resize: none;
-  }
+    .banner_home2 .banner-text1 h3 {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    .banner_home2 .banner-text1 h3 input {
+      font-size: 18px;
+    }
+
+    .banner_home2 .banner-text1 textarea {
+      height: 120px;
+      padding: 10px;
+      font-weight: 500;
+      resize: none;
+    }
+
+    .banner_home2 .banner1 svg,
+    .banner_home2 .banner2 svg {
+      font-size: 20px;
+      color: orange;
+      margin-left: 11px;
+    }
+
+    .banner_home2 .banner2 svg {
+      margin-left: 25px;
+    }
+
+    .float-end {
+      float: right;
+      padding-right: 25px;
+    }
+
+    .float-start {
+      float: left;
+      padding-bottom: 50px;
+      padding-left: 15px;
+    }
+
+    .float-start svg {
+      font-size: 25px;
+      color: #78b7c8;
+      margin-left: -15px;
+    }
+
+    .float-end .slide-button {
+      text-transform: capitalize;
+    }
+    .contact-form {
+      padding: 0 0 20px;
+    }
 }
 
 .mcd-menu {

@@ -1,4 +1,4 @@
-import { loadHomeData} from '../database/dbConnect';
+import { loadHomeData, saveHomeData } from '../database/dbConnect';
 
 /**
  * Load data for home page
@@ -11,4 +11,22 @@ export const getHomeData = async() => {
         console.error(`Something went wrong trying to get home documents: ${err}\n`);
         return {};
     }
+}
+
+/**
+ * Update data for home page data.
+ * @param category
+ * @returns home data was updated
+ */
+export const saveHomePageData = async(homeData: HomeData) => {
+    try {
+        const homeUpdate = await saveHomeData(homeData);
+        if(homeUpdate) {
+            return homeUpdate;
+        }
+    } catch (err) {
+        console.error(`Something went wrong trying to get a catgory documents: ${err}\n`);
+        return {};
+    }
+    return {};
 }

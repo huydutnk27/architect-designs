@@ -140,3 +140,37 @@ export const loadHomeData = async() => {
     return null;
 }
 
+export const saveHomeData = async(homeData: HomeData) => {
+    try {
+        // MongoDB connection
+        const mongoDb = await dbPromise;
+        if (mongoDb) {
+
+            const collectionName = "architect-home";
+            const collection = mongoDb.collection(collectionName);
+
+            // Create an empty filter for home page data
+            const filter = {};
+            /* Set the upsert option to insert a document if no documents match the filter */
+            const options = { upsert: true };
+            // Specify the update to set a value for the plot field
+            const updateDoc = {
+                $set: {
+                    slider: homeData.slider,
+                    specialProduct: homeData.specialProduct
+                }
+            };
+            // Update the first document that matches the filter
+            const result = await collection.updateOne(filter, updateDoc, options);
+            
+            // Print the number of matching and modified documents
+            console.log(
+            `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
+            );
+        }
+    } catch (err) {
+        console.error(`Something went wrong trying to find the documents: ${err}\n`);
+    }
+    return null;
+}
+

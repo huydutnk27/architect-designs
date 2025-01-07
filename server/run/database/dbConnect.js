@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadHomeData = exports.saveCategory = exports.selectCategoryById = exports.loadAllCategories = exports.selectUserByUsername = exports.initialSampleData = void 0;
+exports.saveHomeData = exports.loadHomeData = exports.saveCategory = exports.selectCategoryById = exports.loadAllCategories = exports.selectUserByUsername = exports.initialSampleData = void 0;
 const conn_1 = __importDefault(require("../database/conn"));
 const category_1 = require("../data/category");
 const initialSampleData = async () => {
@@ -142,3 +142,33 @@ const loadHomeData = async () => {
     return null;
 };
 exports.loadHomeData = loadHomeData;
+const saveHomeData = async (homeData) => {
+    try {
+        // MongoDB connection
+        const mongoDb = await conn_1.default;
+        if (mongoDb) {
+            const collectionName = "architect-home";
+            const collection = mongoDb.collection(collectionName);
+            // Create an empty filter for home page data
+            const filter = {};
+            /* Set the upsert option to insert a document if no documents match the filter */
+            const options = { upsert: true };
+            // Specify the update to set a value for the plot field
+            const updateDoc = {
+                $set: {
+                    slider: homeData.slider,
+                    specialProduct: homeData.specialProduct
+                }
+            };
+            // Update the first document that matches the filter
+            const result = await collection.updateOne(filter, updateDoc, options);
+            // Print the number of matching and modified documents
+            console.log(`${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`);
+        }
+    }
+    catch (err) {
+        console.error(`Something went wrong trying to find the documents: ${err}\n`);
+    }
+    return null;
+};
+exports.saveHomeData = saveHomeData;

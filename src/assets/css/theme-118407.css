@@ -26653,7 +26653,6 @@ main {
     } */
     .banner_home2 {
         margin-bottom: 0;
-        margin-bottom: 80px !important;
     }
 }
 @media (min-width: 992px) {
@@ -27164,7 +27163,7 @@ main {
 }
 .banner_home2 {
     padding-top: 70px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
 .banner_home2 .img_banner1 {
     padding: 10px;
@@ -27899,7 +27898,7 @@ main {
     }
     .banner_home2 {
         padding-top: 45px;
-        margin-bottom: 115px;
+        margin-bottom: 0px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {

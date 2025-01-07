@@ -22,26 +22,6 @@ import home_img_18 from "../assets/img/33-new_default/printed-dress.jpg";
 import home_img_19 from "../assets/img/68-new_default/printed-dress.jpg";
 import home_img_20 from "../assets/img/68-large_default/printed-dress.jpg";
 import home_img_21 from "../assets/img/69-new_default/printed-dress.jpg";
-// import home_img_22 from '../assets/img/40-new_default/printed-summer-dress.jpg';
-// import home_img_23 from '../assets/img/40-large_default/printed-summer-dress.jpg';
-// import home_img_24 from '../assets/img/41-new_default/printed-summer-dress.jpg';
-// import home_img_25 from '../assets/img/44-new_default/printed-summer-dress.jpg';
-// import home_img_26 from '../assets/img/44-large_default/printed-summer-dress.jpg';
-// import home_img_27 from '../assets/img/45-new_default/printed-summer-dress.jpg';
-// import home_img_28 from '../assets/img/52-new_default/faded-short-sleeves-tshirt.jpg';
-// import home_img_29 from '../assets/img/52-large_default/faded-short-sleeves-tshirt.jpg';
-// import home_img_30 from '../assets/img/53-new_default/faded-short-sleeves-tshirt.jpg';
-// import home_img_31 from '../assets/img/56-new_default/printed-chiffon-dress.jpg';
-// import home_img_32 from '../assets/img/56-large_default/printed-chiffon-dress.jpg';
-// import home_img_33 from '../assets/img/57-new_default/printed-chiffon-dress.jpg';
-// import home_img_34 from '../assets/img/32-new_default/printed-dress.jpg';
-// import home_img_35 from '../assets/img/32-large_default/printed-dress.jpg';
-// import home_img_36 from '../assets/img/33-new_default/printed-dress.jpg';
-// import home_img_37 from "../assets/img/blocks/bn1.jpg";
-// import home_img_38 from "../assets/img/blocks/bn2.jpg";
-// import home_img_39 from "../assets/img/blocks/bn3.jpg";
-// import home_img_40 from "../assets/img/blocks/bn4.jpg";
-// import axios from 'axios';
 
 const SliderShowComponent = lazy(
   () => import("../components/slider-show/SliderShow")

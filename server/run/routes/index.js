@@ -16,4 +16,5 @@ router.get('/getCategoryById', categoriesController_1.fetchCategoryById);
 router.post('/updateCategory', categoriesController_1.updateCategory);
 router.post('/initialData', initalDataController_1.initData);
 router.get('/fetchHomeData', homeController_1.fetchHomeData);
+router.post('/updateHomeData', homeController_1.updateHome);
 exports.default = router;
