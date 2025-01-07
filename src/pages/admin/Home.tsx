@@ -95,7 +95,6 @@ const AdminHome = () => {
     // callBack get base64 data image from upload component.
     const onChangeImageData = (imgUploadata: string) => {
         // set image base64 data for slider
-        
         if(imgUploadata) {
             switch (slideIndex) {
                 case 1:
