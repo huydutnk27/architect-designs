@@ -114,9 +114,9 @@ const ProductDetail = () => {
                                             <div className="images-container">
                                                 <div className="product-cover">
                                                     <img className="js-qv-product-cover img-responsive"
-                                                        src={product_detail_img_1}
-                                                        alt="" title="" style={{maxWidth: "100%", "height": "auto"}}
-                                                        itemProp="image" width="800" height="800"
+                                                         src="https://demo.fieldthemes.com/decor/home1/40-large_default/printed-summer-dress.jpg"
+                                                         alt="" title="" style={{maxWidth: "100%", "height": "auto"}}
+                                                         itemProp="image" width="800" height="800"
                                                     />
                                                     <div className="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
                                                         <i className="material-icons zoom-in">&#xE8FF;</i>
