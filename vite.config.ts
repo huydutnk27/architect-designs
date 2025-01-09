@@ -4,7 +4,7 @@ import express from './express-plugin';
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [react(),express('server')],
+    plugins: [react(), express('server')],
     // plugins: [react()],
     build: {
         outDir: 'build'

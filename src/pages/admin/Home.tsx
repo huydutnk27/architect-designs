@@ -380,6 +380,7 @@ const AdminHome = () => {
                                                     <img className="img-responsive" src={specialProductData[0].imageData} alt="" />
                                                 </a>
                                             </div>
+                                            <p className="note">Kích thước chuẩn: Width: 550px, Height: 380px</p>
                                             <ImageUpload onSetImageData={onChangeSpecialProductImageData} onSetIndex={() => setIndexSpecialProduct(0)} />
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-12">
@@ -426,6 +427,7 @@ const AdminHome = () => {
                                                 </a>
                                             </div>
                                         </div>
+                                        <p className="note">Kích thước chuẩn: W: 550px, H: 380px</p>
                                         <ImageUpload onSetImageData={onChangeSpecialProductImageData} onSetIndex={() => setIndexSpecialProduct(1)} />
                                     </div>
                                 </div>

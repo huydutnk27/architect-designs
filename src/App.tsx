@@ -7,13 +7,14 @@ import { Route, Routes } from 'react-router-dom';
 
 import Login from './pages/login';
 import axios from 'axios';
+// import ProductDetail from './components/product/ProductDetail';
 
 
 const AdminHome = lazy(() => import('./pages/admin/Home'));
 // const Category = lazy(() => import('./pages/admin/Category'));
 const HomeComponent = lazy(() => import('./components/Home'));
 const CategoryDetail = lazy(() => import('./pages/admin/CategoryDetail'));
-// const ProductDetail = lazy(() => import('./pages/product/index'));
+const ProductDetail = lazy(() => import('./components/product/ProductDetail'));
 
 // Create the function
 async function AddLibrary(urlOfTheLibrary: string) {
@@ -40,6 +41,7 @@ function App() {
             await AddLibrary('./assets/js/head-e447dd.js');
             await AddLibrary('./assets/js/bottom-ac404e.js');
             await AddLibrary('./assets/js/scripts.js');
+            await AddLibrary('./assets/js/product-detail.js');
         }
         loadScript();
         return () => {};
@@ -51,7 +53,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<LayoutComponent />}>
                         <Route path="/" element={<HomeComponent />} />
-                        {/* <Route path="/detail" element={<ProductDetail />} /> */}
+                        <Route path="/detail" element={<ProductDetail />} />
                     </Route>
                     <Route path="/login" element={<Login />} />
                     {/* protected routes */}
