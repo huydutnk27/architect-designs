@@ -15095,6 +15095,11 @@ a.slide-button:hover {
 .demo_slideshow .field-main-slider_1 .shop_now {
     right: 610px;
 }
+
+.demo_slideshow .field-main-slider_3 .field-main-slider_3 .img-slider {
+    display: inline !important;
+}
+
 .demo_slideshow .field-main-slider_3 .large-slide-title {
     right: 420px;
     top: 310px;
