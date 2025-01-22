@@ -15096,10 +15096,6 @@ a.slide-button:hover {
     right: 610px;
 }
 
-.field-main-slider_3 .field-main-slider_3 .img-slider {
-    display: inline !important;
-}
-
 .demo_slideshow .field-main-slider_3 .large-slide-title {
     right: 420px;
     top: 310px;
@@ -20061,6 +20057,11 @@ select:focus {
 .field-main-slider.block {
     margin-bottom: 50px;
 }
+
+.field-main-slider.block .field-main-slider_3 .img-slider {
+    display: inline !important;
+}
+
 .box-slider {
     color: #fff;
     position: absolute;
