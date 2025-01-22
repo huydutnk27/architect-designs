@@ -2,11 +2,10 @@ import axios from 'axios';
 import jQuery from 'jquery';
 import bg_img from '../../assets/images/bg/20.jpg';
 import product_detail_img_1 from '../../assets/img/image1.png';
-// import product_detail_img_2 from '../../assets/images/folio/thumbs/3.jpg';
 import background  from '../../assets/img/front/bg/back-1-1.jpg';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ProductEntity } from '../../model/product';
+import { EmptyProduct, ProductEntity } from '../../model/product';
 
 // Async function to fetch category data by id
 const loadCategoryById = async (id: string) => {
@@ -29,17 +28,7 @@ const loadCategoryById = async (id: string) => {
 // }
 
 const ProductDetail = () => {
-    const productEntity: ProductEntity = {
-        _id: '',
-        index: 1,
-        cateId: '',
-        categoryType: '',
-        imgName: '',
-        name: '',
-        subTitle: '',
-        imageBase64Data: '',
-        description: ''
-    };
+    const productEntity: ProductEntity = EmptyProduct;
     const [productDetail, setProductDetail] = useState(productEntity);
     const {state} = useLocation();
     const [imageData, setImageData] = useState(null);
@@ -127,8 +116,8 @@ const ProductDetail = () => {
                                                     <div className="product-images product-images-33650576 js-qv-product-images carousel-grid owl-carousel">
                                                         <div className="thumb-container">
                                                             <img className="thumb js-thumb selected"
-                                                                    data-image-medium-src="https://demo.fieldthemes.com/decor/home1/40-medium_default/printed-summer-dress.jpg"
-                                                                    data-image-large-src="https://demo.fieldthemes.com/decor/home1/40-large_default/printed-summer-dress.jpg"
+                                                                 data-image-medium-src="https://demo.fieldthemes.com/decor/home1/40-medium_default/printed-summer-dress.jpg"
+                                                                 data-image-large-src="https://demo.fieldthemes.com/decor/home1/40-large_default/printed-summer-dress.jpg"
                                                                     src="https://demo.fieldthemes.com/decor/home1/40-small_default/printed-summer-dress.jpg"
                                                                     alt="" title="" width="100" itemProp="image"
                                                             />
@@ -295,60 +284,62 @@ const ProductDetail = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="tabs">
-                                        <ul className="nav nav-tabs">
-                                            <li className="nav-item">
-                                                <a className="nav-link active" data-toggle="tab" href="#description">Description</a>
-                                            </li>
-                                            <li className="nav-item">
-                                                <a className="nav-link" data-toggle="tab" href="#product-details">Product Details</a>
-                                            </li>
-                                        </ul>
-                                        <div className="tab-content" id="tab-content">
-                                            <div className="tab-pane fade in active" id="description">
-                                                <div className="product-description">
-                                                    <p>
-                                                        Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full
-                                                        ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the
-                                                        beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!
-                                                    </p>
-                                                </div>
-                                                <div className="tab-pane fade" id="product-details"
-                                                    data-product='{"id_shop_default":"1","id_manufacturer":"1","id_supplier":"1","reference":"demo_5","is_virtual":"0","id_category_default":"12","on_sale":"1","online_only":"0","ecotax":"0.000000","minimal_quantity":"1","price":28.975,"unity":null,"unit_price_ratio":"0.000000","additional_shipping_cost":"0.00","customizable":"0","text_fields":"0","uploadable_files":"0","redirect_type":"404","id_type_redirected":"0","available_for_order":"1","available_date":null,"show_condition":"1","condition":"new","show_price":"1","indexed":"1","visibility":"both","cache_default_attribute":"19","advanced_stock_management":"0","date_add":"2017-08-03 04:30:23","date_upd":"2017-08-16 10:30:50","pack_stock_type":"3","meta_description":null,"meta_keywords":null,"meta_title":null,"link_rewrite":"printed-summer-dress","name":"Consectetuer adipis elit.","description":"&lt;p&gt;Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman&#039;s wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!&lt;\/p&gt;","description_short":"&lt;p&gt;Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.&lt;\/p&gt;","available_now":"In stock","available_later":null,"id":5,"id_product":5,"out_of_stock":2,"new":1,"id_product_attribute":19,"quantity_wanted":1,"extraContent":[],"allow_oosp":0,"category":"categories","category_name":"Categories","link":"https:\/\/demo.fieldthemes.com\/decor\/home1\/en\/categories\/5-printed-summer-dress.html","attribute_price":0,"price_tax_exc":28.98,"price_without_reduction":30.5,"reduction":1.525,"specific_prices":{"id_specific_price":"1","id_specific_price_rule":"0","id_cart":"0","id_product":"5","id_shop":"0","id_shop_group":"0","id_currency":"0","id_country":"0","id_group":"0","id_customer":"0","id_product_attribute":"0","price":"-1.000000","from_quantity":"1","reduction":"0.050000","reduction_tax":"1","reduction_type":"percentage","from":"0000-00-00 00:00:00","to":"0000-00-00 00:00:00","score":"32"},"quantity":300,"quantity_all_versions":3600,"id_image":"en-default","features":[{"name":"Compositions","value":"Viscose","id_feature":"5"},{"name":"Styles","value":"Casual","id_feature":"6"},{"name":"Properties","value":"Maxi Dress","id_feature":"7"}],"attachments":[],"virtual":0,"pack":0,"packItems":[],"nopackprice":0,"customization_required":false,"attributes":{"1":{"id_attribute":"1","id_attribute_group":"1","name":"S","group":"Size","reference":null,"ean13":null,"isbn":null,"upc":null},"3":{"id_attribute":"16","id_attribute_group":"3","name":"Yellow","group":"Color","reference":null,"ean13":null,"isbn":null,"upc":null}},"rate":0,"tax_name":"","ecotax_rate":0,"unit_price":0,"customizations":{"fields":[]},"id_customization":0,"is_customizable":false,"show_quantities":true,"quantity_label":"Items","quantity_discounts":[],"customer_group_discount":0}'
-                                                >
-                                                    <div className="product-manufacturer">
-                                                        <a href="https://demo.fieldthemes.com/decor/home1/en/1_brand1">
-                                                            <img src="https://demo.fieldthemes.com/decor/home1/img/m/1.jpg" className="img img-thumbnail manufacturer-logo" />
-                                                        </a>
-                                                    </div>
-                                                    <div className="product-reference">
-                                                        <label className="label">Reference </label>
-                                                        <span itemProp="sku">demo_5</span>
-                                                    </div>
-                                                    <div className="product-quantities">
-                                                        <label className="label">In stock</label>
-                                                        <span>300 Items</span>
-                                                    </div>
-                                                    <div className="product-out-of-stock"></div>
-                                                    <section className="product-features">
-                                                        <h3 className="h6">Data sheet</h3>
-                                                        <dl className="data-sheet">
-                                                            <dt className="name">Compositions</dt>
-                                                            <dd className="value">Viscose</dd>
-                                                            <dt className="name">Styles</dt>
-                                                            <dd className="value">Casual</dd>
-                                                            <dt className="name">Properties</dt>
-                                                            <dd className="value">Maxi Dress</dd>
-                                                        </dl>
-                                                    </section>
-
-                                                    <div className="product-condition">
-                                                        <label className="label">Condition </label>
-                                                        <link itemProp="itemCondition" href="https://schema.org/NewCondition" />
-                                                        <span>New product</span>
-                                                    </div>
-                                                </div>
+                                </div>
+                                <div className="tabs">
+                                    <ul className="nav nav-tabs">
+                                        <li className="nav-item">
+                                            <a className="nav-link active" data-toggle="tab" href="#description">Description</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" data-toggle="tab" href="#product-details">Product Details</a>
+                                        </li>
+                                    </ul>
+                                    <div className="tab-content" id="tab-content">
+                                        <div className="tab-pane fade in active" id="description">
+                                            <div className="product-description">
+                                                <p>
+                                                    Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full
+                                                    ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the
+                                                    beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!
+                                                </p>
                                             </div>
+                                        </div>
+                                        <div className="tab-pane fade" id="product-details"
+                                                data-product='{"id_shop_default":"1","id_manufacturer":"1","id_supplier":"1","reference":"demo_5","is_virtual":"0","id_category_default":"12","on_sale":"1","online_only":"0","ecotax":"0.000000","minimal_quantity":"1","price":28.975,"unity":null,"unit_price_ratio":"0.000000","additional_shipping_cost":"0.00","customizable":"0","text_fields":"0","uploadable_files":"0","redirect_type":"404","id_type_redirected":"0","available_for_order":"1","available_date":null,"show_condition":"1","condition":"new","show_price":"1","indexed":"1","visibility":"both","cache_default_attribute":"19","advanced_stock_management":"0","date_add":"2017-08-03 04:30:23","date_upd":"2017-08-16 10:30:50","pack_stock_type":"3","meta_description":null,"meta_keywords":null,"meta_title":null,"link_rewrite":"printed-summer-dress","name":"Consectetuer adipis elit.","description":"&lt;p&gt;Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman&#039;s wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!&lt;\/p&gt;","description_short":"&lt;p&gt;Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.&lt;\/p&gt;","available_now":"In stock","available_later":null,"id":5,"id_product":5,"out_of_stock":2,"new":1,"id_product_attribute":19,"quantity_wanted":1,"extraContent":[],"allow_oosp":0,"category":"categories","category_name":"Categories","link":"https:\/\/demo.fieldthemes.com\/decor\/home1\/en\/categories\/5-printed-summer-dress.html","attribute_price":0,"price_tax_exc":28.98,"price_without_reduction":30.5,"reduction":1.525,"specific_prices":{"id_specific_price":"1","id_specific_price_rule":"0","id_cart":"0","id_product":"5","id_shop":"0","id_shop_group":"0","id_currency":"0","id_country":"0","id_group":"0","id_customer":"0","id_product_attribute":"0","price":"-1.000000","from_quantity":"1","reduction":"0.050000","reduction_tax":"1","reduction_type":"percentage","from":"0000-00-00 00:00:00","to":"0000-00-00 00:00:00","score":"32"},"quantity":300,"quantity_all_versions":3600,"id_image":"en-default","features":[{"name":"Compositions","value":"Viscose","id_feature":"5"},{"name":"Styles","value":"Casual","id_feature":"6"},{"name":"Properties","value":"Maxi Dress","id_feature":"7"}],"attachments":[],"virtual":0,"pack":0,"packItems":[],"nopackprice":0,"customization_required":false,"attributes":{"1":{"id_attribute":"1","id_attribute_group":"1","name":"S","group":"Size","reference":null,"ean13":null,"isbn":null,"upc":null},"3":{"id_attribute":"16","id_attribute_group":"3","name":"Yellow","group":"Color","reference":null,"ean13":null,"isbn":null,"upc":null}},"rate":0,"tax_name":"","ecotax_rate":0,"unit_price":0,"customizations":{"fields":[]},"id_customization":0,"is_customizable":false,"show_quantities":true,"quantity_label":"Items","quantity_discounts":[],"customer_group_discount":0}'
+                                            >
+                                                <div className="product-manufacturer">
+                                                    <a href="https://demo.fieldthemes.com/decor/home1/en/1_brand1">
+                                                        <img src="https://demo.fieldthemes.com/decor/home1/img/m/1.jpg" className="img img-thumbnail manufacturer-logo" />
+                                                    </a>
+                                                </div>
+                                                <div className="product-reference">
+                                                    <label className="label">Reference </label>
+                                                    <span itemProp="sku">demo_5</span>
+                                                </div>
+                                                <div className="product-quantities">
+                                                    <label className="label">In stock</label>
+                                                    <span>300 Items</span>
+                                                </div>
+                                                <div className="product-out-of-stock"></div>
+                                                <section className="product-features">
+                                                    <h3 className="h6">Data sheet</h3>
+                                                    <dl className="data-sheet">
+                                                        <dt className="name">Loại sản phẩm</dt>
+                                                        <dd className="value">TRẦN XUYÊN SÁNG</dd>
+                                                        <dt className="name">Nhà sản xuất</dt>
+                                                        <dd className="value">Viscose</dd>
+                                                        <dt className="name">Thời gian thi công</dt>
+                                                        <dd className="value">Casual</dd>
+                                                        <dt className="name">Thời gian bảo hành</dt>
+                                                        <dd className="value">Maxi Dress</dd>
+                                                    </dl>
+                                                </section>
+
+                                                <div className="product-condition">
+                                                    <label className="label">Condition </label>
+                                                    <link itemProp="itemCondition" href="https://schema.org/NewCondition" />
+                                                    <span>New product</span>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>

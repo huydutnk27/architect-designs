@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import { TfiPencilAlt } from 'react-icons/tfi';
 
-const ImageUpload = ({ onSetImageData, onSetIndex }) => {
-    const [image, setImage] = useState("");
+const ImageUpload = ({ onSetImageData, setIndex, name }) => {
+    // const [image, setImage] = useState("");
     const inputFile = useRef(null);
 
     const convetBase64 = (file: File) => {
@@ -24,14 +24,9 @@ const ImageUpload = ({ onSetImageData, onSetIndex }) => {
     const handleFileUpload = (e) => {
         const files = e.target.files;
         if (files && files.length) {
-            const fileName = files[0].name;
-            var parts = fileName.split('.');
-            const fileType = parts[parts.length - 1];
-
-            // console.log('fileType', fileType);
-            // setImage(files[0]);
             convetBase64(files[0]);
         }
+        setIndex(e.target.name);
     };
 
     const onButtonClick = () => {
@@ -42,7 +37,7 @@ const ImageUpload = ({ onSetImageData, onSetIndex }) => {
     return (
         <div>
             <input style={{display: 'none'}} type="file" accept=".jpg,.png,.jpeg" 
-                    ref={inputFile} onChange={handleFileUpload}/>
+                    ref={inputFile} onChange={handleFileUpload} name={name}/>
             <TfiPencilAlt onClick={onButtonClick}/>
         </div>
         

@@ -1,16 +1,16 @@
 import dbPromise from '../database/conn';
-import { data } from '../data/category';
+import { data } from '../data/products';
 
 export const initialSampleData = async() => {
     try {
         // MongoDB connection
         const mongoDb = await dbPromise;
         if (mongoDb) {
-            const collectionName = "architect-home";
+            const collectionName = "architect-products";
             const collection = mongoDb.collection(collectionName);
-            const categories = data.home;
-            const insertManyResult = await collection.insertOne(categories);
-            console.log(`${insertManyResult.insertedId} documents successfully inserted.\n`);
+            const categories = data.products;
+            const insertManyResult = await collection.insertMany(categories);
+            console.log(`${insertManyResult.insertedCount} documents successfully inserted.\n`);
         }
     } catch (err) {
         console.error(`Something went wrong trying to find the documents: ${err}\n`);

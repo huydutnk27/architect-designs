@@ -5,17 +5,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.saveHomeData = exports.loadHomeData = exports.saveCategory = exports.selectCategoryById = exports.loadAllCategories = exports.selectUserByUsername = exports.initialSampleData = void 0;
 const conn_1 = __importDefault(require("../database/conn"));
-const category_1 = require("../data/category");
+const products_1 = require("../data/products");
 const initialSampleData = async () => {
     try {
         // MongoDB connection
         const mongoDb = await conn_1.default;
         if (mongoDb) {
-            const collectionName = "architect-home";
+            const collectionName = "architect-products";
             const collection = mongoDb.collection(collectionName);
-            const categories = category_1.data.home;
-            const insertManyResult = await collection.insertOne(categories);
-            console.log(`${insertManyResult.insertedId} documents successfully inserted.\n`);
+            const categories = products_1.data.products;
+            const insertManyResult = await collection.insertMany(categories);
+            console.log(`${insertManyResult.insertedCount} documents successfully inserted.\n`);
         }
     }
     catch (err) {

@@ -6,7 +6,9 @@ import AdminLayout from './layout/AdminLayout';
 import { Route, Routes } from 'react-router-dom';
 
 import Login from './pages/login';
-import axios from 'axios';
+import ProductList from './components/product/ProductList';
+import ProductDetailAdmin from './pages/admin/ProductDetail';
+import ProductListAdmin from './pages/admin/ProductList';
 // import ProductDetail from './components/product/ProductDetail';
 
 
@@ -27,15 +29,8 @@ async function AddLibrary(urlOfTheLibrary: string) {
     document.body.appendChild(script);
 }
 
-// Async function to fetch categories data
-const loadHome = async () => {
-    return await axios.get('/api/fetchHomeData');
-};
-
 function App() {
-    loadHome().then(res => {
-        window.sessionStorage.setItem("HOME_DATA", JSON.stringify(res.data.home));
-    });
+    
     useEffect(() => {
         const loadScript = async() => {
             await AddLibrary('./assets/js/head-e447dd.js');
@@ -53,6 +48,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<LayoutComponent />}>
                         <Route path="/" element={<HomeComponent />} />
+                        <Route path="/list" element={<ProductList />} />
                         <Route path="/detail" element={<ProductDetail />} />
                     </Route>
                     <Route path="/login" element={<Login />} />
@@ -63,7 +59,8 @@ function App() {
                         // </ProtectedRoute>
                     }>
                         <Route path="/admin/home" element={<AdminHome />} />
-                        <Route path="/admin/categories/edit" element={<CategoryDetail />} />
+                        <Route path="/admin/product" element={<ProductListAdmin />} />
+                        <Route path="/admin/product/edit" element={<ProductDetailAdmin />} />
                     </Route>
                 </Routes>
             // {/* </AuthProvider> */}

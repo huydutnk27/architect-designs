@@ -1,5 +1,6 @@
 import { lazy, use, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 import home_img_1 from "../assets/img/blocks/icon1.jpg";
 import home_img_2 from "../assets/img/blocks/icon2.jpg";
@@ -22,30 +23,45 @@ import home_img_18 from "../assets/img/33-new_default/printed-dress.jpg";
 import home_img_19 from "../assets/img/68-new_default/printed-dress.jpg";
 import home_img_20 from "../assets/img/68-large_default/printed-dress.jpg";
 import home_img_21 from "../assets/img/69-new_default/printed-dress.jpg";
+import { HomeEntity } from '../model/home';
 
 const SliderShowComponent = lazy(
     () => import("../components/slider-show/SliderShow")
 );
 
+// Async function to fetch categories data
+const loadHome = async () => {
+    return await axios.get('/api/fetchHomeData');
+};
+
 const HomeComponent = () => {
-    const home = JSON.parse(window.sessionStorage.getItem("HOME_DATA"));
+
+    // const home = JSON.parse(window.sessionStorage.getItem("HOME_DATA"));
     // const [homeData, setHomeData] = useState({});
     // let [sliderData, setSliderData] = useState([]);
     // let [headerImage, setHeaderImage] = useState(home['headerImg']);
     // console.log(home['headerImg']);
     const navigation = useNavigate();
     // const home = use(messagePromise);
-    const [sliderData, setSliderData] = useState(home.slider);
-    const [specialProduct, setSpecialProduct] = useState(home.specialProduct);
-    // console.log("home['headerImg']", home);
-    // useEffect(() => {
+    const homeEntity: HomeEntity = {
+        slider: [],
+        specialProduct: []
+    };
+    const [slider, setSlider] = useState(homeEntity.slider);
+    const [specialProduct, setSpecialProduct] = useState(homeEntity.specialProduct);
 
-    // setHomeData(home);
-    // setSliderData(home['slider'] || []);
-    // console.log(home);
-    // console.log(home['slider']);
-    // sliderData = home['slider'];
-    // }, []);
+    
+    // console.log("home['headerImg']", home);
+    useEffect(() => {
+        loadHome().then(res => {
+            Object.assign(homeEntity, res.data.home);
+
+            // GET SLIDER DATA
+            setSlider(homeEntity.slider);
+            // LOAD SPECIAL PRODUCT DATA
+            setSpecialProduct(homeEntity.specialProduct);
+        });
+    }, [homeEntity]);
 
     /**
      * Redirect to category detail
@@ -58,7 +74,88 @@ const HomeComponent = () => {
     };
     return (
         <>
-            <SliderShowComponent data={sliderData} />
+            <div id="field_slideshow">
+                <div className="field-main-slider block" style={{overflow: "hidden"}}>
+                    <div id="insideslider_mod" className="outer-slide" style={{width: "1920px", height: "800px"}}>
+                        {/* <div className="loading">
+                            <div className="bg-loading"></div>
+                            <div className="icon-loading"></div>
+                        </div> */}
+                        <div data-u="slides" style={{width: "1920px", height: "800px"}}>
+                            <div className="field-main-slider_1">
+                                <a href="#">
+                                    <img className="img-slider" src={slider[0]?.imageData} alt="" data-u="image" />
+                                </a>
+                                <div className="box-slider">
+                                    <div className="large-slide-title title_font" data-u="caption" data-t="T-*IB" data-t2="ZML|TR" data-d="-300">
+                                        {slider[0]?.lineText1}
+                                    </div>
+                                    <div className="big-slide-title title_font" data-u="caption" data-t="ZM*WVR|LB" data-t2="WVC|R" data-d="-300">
+                                        {slider[0]?.lineText2}
+                                    </div>
+                                    <div className="small-slide-title" data-u="caption" data-t="TORTUOUS|HL" data-t2="JDN|B" data-d="-300">
+                                        <p>{slider[0]?.lineText3}</p>
+                                    </div>
+                                    <div className="div-slide-button shop_now" data-u="caption" data-t="B-R*">
+                                        <a className="slide-button title_font" href="#">
+                                            Shop now !
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="field-main-slider_2">
+                                <a href="#">
+                                    <img className="img-slider" src={slider[1]?.imageData} alt="" data-u="image" />
+                                </a>
+                                <div className="box-slider">
+                                    <div className="large-slide-title title_font" data-u="caption" data-t="ZM*JUP1|T" data-t2="FLTTRWN|LT">
+                                        {slider[1]?.lineText1}
+                                    </div>
+                                    <div className="big-slide-title title_font" data-u="caption" data-t="ZM*JUP1|T" data-t2="FLTTRWN|LT">
+                                        {slider[1]?.lineText2}
+                                    </div>
+                                    <div className="small-slide-title" data-u="caption" data-t="ZM*JUP1|L" data-t2="TORTUOUS|HL">
+                                        <h3>{slider[1]?.lineText3}</h3>
+                                    </div>
+                                    <div className="div-slide-button shop_now" data-u="caption" data-t="ZM*JUP1|B">
+                                        <a className="slide-button title_font" href="#">
+                                            Shop now !
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="field-main-slider_3">
+                                <a href="#">
+                                    <img className="img-slider" src={slider[2]?.imageData} alt="" data-u="image" />
+                                </a>
+                                <div className="box-slider">
+                                    <div className="large-slide-title title_font" data-u="caption" data-t="ZM*WVR|RT" data-t2="WVC|B" data-d="-300">
+                                        {slider[2]?.lineText1}
+                                    </div>
+                                    <div className="big-slide-title title_font" data-u="caption" data-t="ZM*WVR|LB" data-t2="WVC|T" data-d="-300">
+                                        {slider[2]?.lineText2}
+                                    </div>
+                                    <div className="small-slide-title" data-u="caption" data-t="DDGDANCE|RB" data-t2="WVC|T" data-d="-300">
+                                        <h3>{slider[2]?.lineText3}</h3>
+                                    </div>
+                                    <div className="div-slide-button shop_now" data-u="caption" data-t="ZM*WVR|LB" data-t2="WVC|T" data-d="-300">
+                                        <a className="slide-button title_font" href="#">
+                                            Shop now !
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-u="navigator">
+                            <div data-u="prototype"></div>
+                        </div>
+                        <span data-u="arrowleft"><i className="fa fa-angle-left"></i></span>
+                        <span data-u="arrowright"><i className="fa fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
             <aside id="notifications">
                 <div className="container"></div>
             </aside>
@@ -124,7 +221,7 @@ const HomeComponent = () => {
                             {" "}
                             <img
                                 className="img-responsive"
-                                src={specialProduct[0].imageData}
+                                src={specialProduct[0]?.imageData}
                                 alt=""
                             />
                             </a>
@@ -133,9 +230,9 @@ const HomeComponent = () => {
                         <div className="col-xs-12 col-sm-12 col-md-12">
                         <div className="banner-text1">
                             <h3>
-                            <a className="href=">{specialProduct[0].mainText}</a>
+                            <a className="href=">{specialProduct[0]?.mainText}</a>
                             </h3>
-                            <p>{specialProduct[0].subText}</p>
+                            <p>{specialProduct[0]?.subText}</p>
                             <a className="title_font shop-now1" href="#">
                             Shop now !
                             </a>
@@ -148,9 +245,9 @@ const HomeComponent = () => {
                         <div className="col-xs-12 col-sm-12 col-md-12">
                         <div className="banner-text1">
                             <h3>
-                            <a className="href=">{specialProduct[1].mainText}</a>
+                            <a className="href=">{specialProduct[1]?.mainText}</a>
                             </h3>
-                            <p>{specialProduct[1].subText}</p>
+                            <p>{specialProduct[1]?.subText}</p>
                             <a className="title_font shop-now1" href="#">
                             Shop now !
                             </a>
@@ -164,7 +261,7 @@ const HomeComponent = () => {
                             {" "}
                             <img
                                 className="img-responsive"
-                                src={specialProduct[1].imageData}
+                                src={specialProduct[1]?.imageData}
                                 alt=""
                             />
                             </a>

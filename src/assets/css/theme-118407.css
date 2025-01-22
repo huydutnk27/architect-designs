@@ -11266,7 +11266,7 @@ body#checkout #footer {
     background: #f6f6f6;
 }
 .product-features > dl.data-sheet dt.name {
-    text-transform: capitalize;
+    text-transform: none;
 }
 .product-variants > .product-variants-item {
     margin: 1.25rem 0;

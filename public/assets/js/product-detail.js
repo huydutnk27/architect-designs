@@ -268,6 +268,38 @@ function applyElevateZoom() {
             '<div className="carousel-next disable-select"><span className="fa fa-angle-right"></span></div>',
         ],
     });
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == " ") c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    $(".click-product-grid").click(function (e) {
+        $("#wrapper").removeClass("active_list");
+        $("#wrapper").addClass("active_grid");
+        setCookie("status_list_product", "active_grid", 1);
+    });
+    $(".click-product-list").click(function (e) {
+        $("#wrapper").removeClass("active_grid");
+        $("#wrapper").addClass("active_list");
+        setCookie("status_list_product", "active_list", 1);
+    });
+    if (getCookie("status_list_product") !== "" && getCookie("status_list_product") !== "active_grid") {
+        $("#wrapper").removeClass("active_grid");
+        $("#wrapper").addClass("active_list");
+    }
 }
 
 function restartElevateZoom() {

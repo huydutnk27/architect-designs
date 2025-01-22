@@ -166,7 +166,6 @@ const AdminHome = () => {
                 setSpecialProductData(homeEntity.specialProduct);
                 
                 setIsLoaded(true);
-                console.log('AAAAAAAAAAAAAAAAAAAAAAA');
             });
         }
         // console.log('homeData', homeData);
@@ -336,7 +335,7 @@ const AdminHome = () => {
                             </div>
                         </div>
                         <div className="float-start">
-                            <ImageUpload onSetImageData={onChangeImageData} onSetIndex={() => {}}/>
+                            <ImageUpload onSetImageData={onChangeImageData} setIndex={() => {}} name={''}/>
                         </div>
                     </div>
                 </div>
@@ -381,7 +380,7 @@ const AdminHome = () => {
                                                 </a>
                                             </div>
                                             <p className="note">Kích thước chuẩn: Width: 550px, Height: 380px</p>
-                                            <ImageUpload onSetImageData={onChangeSpecialProductImageData} onSetIndex={() => setIndexSpecialProduct(0)} />
+                                            <ImageUpload onSetImageData={onChangeSpecialProductImageData} setIndex={() => setIndexSpecialProduct(0)} name={'SpecialProduct0'}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-12">
                                             <div className="banner-text1">
@@ -428,7 +427,7 @@ const AdminHome = () => {
                                             </div>
                                         </div>
                                         <p className="note">Kích thước chuẩn: W: 550px, H: 380px</p>
-                                        <ImageUpload onSetImageData={onChangeSpecialProductImageData} onSetIndex={() => setIndexSpecialProduct(1)} />
+                                        <ImageUpload onSetImageData={onChangeSpecialProductImageData} setIndex={() => setIndexSpecialProduct(1)} name={'SpecialProduct1'}/>
                                     </div>
                                 </div>
                             </div>
